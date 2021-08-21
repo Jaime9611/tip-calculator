@@ -3,5 +3,6 @@
 .card {
   width: 100%;
   height: f.rem(300);
-  background-color: red;
+  background-color: var(--white);
+  border-radius: f.rem(20);
 }
