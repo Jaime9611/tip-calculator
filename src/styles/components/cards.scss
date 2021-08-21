@@ -1,0 +1,7 @@
+@use '../utils/functions' as f;
+
+.card {
+  width: 100%;
+  height: f.rem(300);
+  background-color: red;
+}

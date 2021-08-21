@@ -1,0 +1,23 @@
+@use '../utils/functions' as f;
+
+.flex {
+  display: flex;
+  &--all-center {
+    justify-content: center;
+    align-items: center;
+  }
+  &--jc-sb {
+    justify-content: space-between;
+  }
+  &--jc-sa {
+    justify-content: space-around;
+  }
+  &--dr {
+    flex-direction: column;
+  }
+}
+
+.container {
+  width: f.rem(350);
+  height: f.rem(300); // temporal
+}

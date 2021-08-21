@@ -1,3 +1,12 @@
-body {
-  background-color: black;
-}
+// Basic Sass Structure
+// * base/ - Reset files and  standard styles (resets, typography)
+// * components/ - Styles for specific components (buttons, slidesr, widgets)
+// * layout/ - Main components of the site (header, footer, sidebar, nav)
+// * pages/ - Specific styles for each HTML page (home, contact)
+// * themes/ - (theme, admin)
+// * utils/ - Tools and helpers (mixins, functions, variables)
+// * vendors/ - External libraries (normalize, bootstrap)
+
+@use 'base';
+@use 'layout';
+@use 'components';
