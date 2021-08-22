@@ -5,17 +5,21 @@
   &__label {
     font-weight: 700;
   }
-  &__field {
+  &--field {
     position: relative;
     width: 100%;
     margin-top: f.rem(12);
   }
-  &__selector-tip {
+  &--selector-tip {
     display: grid;
     margin-top: f.rem(20);
     grid-template-columns: 1fr 1fr;
     gap: f.rem(17);
   }
+}
+
+.input-hide {
+  display: none;
 }
 
 input[type="radio"] {

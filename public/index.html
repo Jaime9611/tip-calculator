@@ -45,13 +45,13 @@
     <div class="container flex--dr flex--all-center">
       <div class="card flex flex--all-center">
         <div class="card-container">
-          <form class="flex flex--dr">
-            <div class="form-section">
+          <form class="flex flex--dr" autocomplete="off">
+            <div class="form-section--values">
               <div class="form-element--input-element">
                 <label class="input-element__label" for="total-bill"
                   >Bill</label
                 >
-                <div class="input-element__field">
+                <div class="input-element--field">
                   <div class="input-icon--dollar">$</div>
                   <input
                     class="input-field--number"
@@ -68,7 +68,7 @@
                 <label class="input-element__label" for="tip"
                   >Select Tip %</label
                 >
-                <div class="input-element__selector-tip">
+                <div class="input-element--selector-tip">
                   <input type="radio" name="tip" id="tip5" />
                   <label class="btn btn-tip" for="tip5">5%</label>
                   <input type="radio" name="tip" id="tip10" />
@@ -81,7 +81,7 @@
                   <label class="btn btn-tip" for="tip50">50%</label>
                   <button class="btn btn-custom">Custom</button>
                   <input
-                    class="input-field--number"
+                    class="input-field--number input-hide"
                     type="number"
                     name="tip"
                     id="t6"
@@ -90,22 +90,22 @@
                     placeholder="0"
                   />
                 </div>
-                <div class="form-element--input-element">
-                  <label class="input-element__label" for="total-bill"
-                    >Number of People</label
-                  >
-                  <div class="input-element__field">
-                    <i class="input-icon--user fas fa-user"></i>
-                    <input
-                      class="input-field--number"
-                      type="number"
-                      name="total-bill"
-                      id="total-bill"
-                      placeholder="0"
-                      min="1"
-                      step="0.01"
-                    />
-                  </div>
+              </div>
+              <div class="form-element--input-element">
+                <label class="input-element__label" for="total-bill"
+                  >Number of People</label
+                >
+                <div class="input-element--field">
+                  <i class="input-icon--user fas fa-user"></i>
+                  <input
+                    class="input-field--number"
+                    type="number"
+                    name="total-bill"
+                    id="total-bill"
+                    placeholder="0"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
               </div>
             </div>
