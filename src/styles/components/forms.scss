@@ -5,7 +5,11 @@
   padding-bottom: f.rem(20);
   &--input-element {
     @extend .form-element;
-    width: 100%;
-    border: none;
+  }
+  &--info-totals {
+    @extend .form-element;
+    padding: f.rem(24);
+    background-color: var(--very-dark-cyan);
+    border-radius: f.rem(20);
   }
 }

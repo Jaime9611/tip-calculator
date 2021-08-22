@@ -1,0 +1,19 @@
+@use '../utils/functions.scss' as f;
+
+.info-totals {
+  width: 100%;
+  padding: f.rem(10) 0;
+}
+
+.info-totals__text {
+  &--title {
+    color: var(--white);
+    font-size: var(--page-fsize);
+    font-weight: 700;
+  }
+  &--value {
+    color: var(--strong-cyan);
+    font-size: var(--form-fsize);
+    font-weight: 700;
+  }
+}

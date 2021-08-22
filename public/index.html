@@ -56,8 +56,8 @@
                   <input
                     class="input-field--number"
                     type="number"
-                    name="total-bill"
-                    id="total-bill"
+                    name="bill-value"
+                    id="bill-value"
                     placeholder="0"
                     min="1"
                     step="0.01"
@@ -100,8 +100,8 @@
                   <input
                     class="input-field--number"
                     type="number"
-                    name="total-bill"
-                    id="total-bill"
+                    name="persons"
+                    id="persons"
                     placeholder="0"
                     min="1"
                     step="0.01"
@@ -110,25 +110,29 @@
               </div>
             </div>
             <div class="form-section--totals">
-              <div class="form-element--info-totals">
-                <div class="info-totals__text">
-                  <h3 class="info-totals__title">Tip Amount</h3>
-                  <p class="info-totals__info">/ person</p>
+              <div
+                class="form-element--info-totals flex flex--dr flex--all-center"
+              >
+                <div class="info-totals flex flex--jc-sb">
+                  <div class="info-totals__text">
+                    <h3 class="info-totals__text--title">Tip Amount</h3>
+                    <p class="info-totals__text--info">/ person</p>
+                  </div>
+                  <div class="info-totals__text--value flex flex--all-center">
+                    $<span id="tip-total">4.27</span>
+                  </div>
                 </div>
-                <div class="info-totals__value">
-                  $<span id="tip-total">4.27</span>
+                <div class="info-totals flex flex--jc-sb">
+                  <div class="info-totals__text">
+                    <h3 class="info-totals__text--title">Total</h3>
+                    <p class="info-totals__text--info">/ person</p>
+                  </div>
+                  <div class="info-totals__text--value flex flex--all-center">
+                    $<span id="bill-total">32.79</span>
+                  </div>
                 </div>
+                <button class="btn" type="submit">Reset</button>
               </div>
-              <div class="form-element--info-totals">
-                <div class="info-totals__text">
-                  <h3 class="info-totals__title">Total</h3>
-                  <p class="info-totals__info">/ person</p>
-                </div>
-                <div class="info-totals__value">
-                  $<span id="bill-total">32.79</span>
-                </div>
-              </div>
-              <button class="btn" type="submit">Reset</button>
             </div>
           </form>
         </div>
