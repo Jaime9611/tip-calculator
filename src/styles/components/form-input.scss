@@ -1,0 +1,64 @@
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+.input-element {
+  &__label {
+    font-weight: 700;
+  }
+  &__field {
+    position: relative;
+    width: 100%;
+    margin-top: f.rem(12);
+  }
+  &__selector-tip {
+    display: grid;
+    margin-top: f.rem(20);
+    grid-template-columns: 1fr 1fr;
+    gap: f.rem(17);
+  }
+}
+
+input[type="radio"] {
+  width: 0;
+  position: fixed;
+  opacity: 0;
+  &:checked + label {
+    @include m.radio-btn-style(var(--very-dark-cyan));
+  }
+  &:focus + label {
+    // Accesability
+    @include m.radio-btn-style(var(--very-dark-cyan));
+  }
+  &:hover + label {
+    @include m.radio-btn-style(var(--very-dark-cyan));
+  }
+}
+
+.input-icon--dollar {
+  @include m.input-icon(text);
+}
+
+.input-icon--user {
+  @include m.input-icon(icon);
+}
+
+.input-field--number {
+  width: 100%;
+  height: f.rem(47);
+  padding-left: 44px;
+  padding-top: 14px;
+  padding-right: 17px;
+  padding-bottom: 14px;
+  -moz-appearance: textfield;
+  border: none;
+  text-align: right;
+  font-size: var(--form-fsize);
+  font-family: var(--space-mono);
+  font-weight: 700;
+  border-radius: f.rem(5);
+  background-color: var(--secondary-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  &:focus {
+    border: 2px solid var(--strong-cyan);
+  }
+}
