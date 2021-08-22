@@ -2,7 +2,11 @@
 
 .card {
   width: 100%;
-  height: f.rem(300);
   background-color: var(--white);
   border-radius: f.rem(20);
+  padding: f.rem(18) f.rem(14);
+}
+
+.card-container {
+  width: f.rem(310);
 }

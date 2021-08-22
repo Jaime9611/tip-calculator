@@ -1,0 +1,42 @@
+@use '../utils/functions' as f;
+
+.form-element {
+  padding-top: f.rem(20);
+  padding-bottom: f.rem(20);
+  &--input-element {
+    @extend .form-element;
+    width: 100%;
+    border: none;
+  }
+}
+
+.input-element {
+  &__label {
+    font-weight: 700;
+  }
+  &__field {
+    background-color: var(--secondary-light-grayish-cyan);
+    border-radius: f.rem(5);
+    width: 100%;
+    height: f.rem(47);
+    // margin-bottom: f.rem(20);
+    .input-icon--dollar {
+      width: 15%;
+      font-size: var(--form-fsize);
+      text-align: center;
+      color: var(--secondary-dark-grayish-cyan);
+    }
+    .input-field--number {
+      width: 85%;
+      padding: f.rem(18);
+      -moz-appearance: textfield;
+      border: none;
+      text-align: right;
+      background-color: transparent;
+      font-family: var(--space-mono);
+      font-size: var(--form-fsize);
+      font-weight: 700;
+      color: var(--very-dark-cyan);
+    }
+  }
+}

@@ -11,4 +11,11 @@
 
 html {
   font-size: var(--page-fsize);
+  font-family: var(--space-mono);
+  color: var(--primary-dark-grayish-cyan);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
 }
