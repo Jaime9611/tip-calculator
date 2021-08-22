@@ -23,4 +23,16 @@
       border: 2px solid var(--strong-cyan);
     }
   }
+  &--reset {
+    width: 100%;
+    margin-top: f.rem(35);
+    padding: f.rem(9);
+    border: none;
+    font-size: f.rem(18);
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+    &:hover {
+      background-color: var(--primary-light-grayish-cyan);
+    }
+  }
 }
