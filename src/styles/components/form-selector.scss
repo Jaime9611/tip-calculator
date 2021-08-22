@@ -1,0 +1,26 @@
+@use '../utils/functions' as f;
+
+.input-element__selector-tip {
+  display: grid;
+  margin-top: f.rem(20);
+  grid-template-columns: 1fr 1fr;
+  gap: f.rem(17);
+  input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+    &:checked + label {
+      background-color: var(--strong-cyan);
+      color: var(--very-dark-cyan);
+    }
+    &:focus + label {
+      // Accesability
+      background-color: var(--strong-cyan);
+      color: var(--very-dark-cyan);
+    }
+    &:hover + label {
+      background-color: var(--strong-cyan);
+      color: var(--very-dark-cyan);
+    }
+  }
+}
