@@ -43,7 +43,6 @@
                 <label class="input-element__label" for="total-bill"
                   >Bill</label
                 >
-                <br />
                 <div class="input-element__field flex flex--all-center">
                   <div class="input-icon--dollar">$</div>
                   <input
@@ -54,14 +53,44 @@
                   />
                 </div>
               </div>
-              <div class="form-bill__tip-selector">
-                <input type="radio" name="tip" id="t1" />5%
-                <input type="radio" name="tip" id="t2" />10%
-                <input type="radio" name="tip" id="t3" />15%
-                <input type="radio" name="tip" id="t4" />25%
-                <input type="radio" name="tip" id="t5" />50%
-                <button>Custom</button>
-                <input type="number" name="tip" id="t6" />
+              <div class="form-element--tip-selector">
+                <label class="input-element__label" for="tip"
+                  >Select Tip %</label
+                >
+                <div class="input-element__selector">
+                  <input
+                    class="btn btn-tip"
+                    type="radio"
+                    name="tip"
+                    id="t1"
+                  />5%
+                  <input
+                    class="btn btn-tip"
+                    type="radio"
+                    name="tip"
+                    id="t2"
+                  />10%
+                  <input
+                    class="btn btn-tip"
+                    type="radio"
+                    name="tip"
+                    id="t3"
+                  />15%
+                  <input
+                    class="btn btn-tip"
+                    type="radio"
+                    name="tip"
+                    id="t4"
+                  />25%
+                  <input
+                    class="btn btn-tip"
+                    type="radio"
+                    name="tip"
+                    id="t5"
+                  />50%
+                  <button>Custom</button>
+                  <input class="btn btn-tip" type="number" name="tip" id="t6" />
+                </div>
               </div>
             </div>
           </form>

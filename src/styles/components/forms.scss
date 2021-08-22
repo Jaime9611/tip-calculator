@@ -1,0 +1,11 @@
+@use '../utils/functions.scss' as f;
+
+.form-element {
+  padding-top: f.rem(20);
+  padding-bottom: f.rem(20);
+  &--input-element {
+    @extend .form-element;
+    width: 100%;
+    border: none;
+  }
+}
