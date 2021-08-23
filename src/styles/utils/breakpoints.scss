@@ -1,0 +1,25 @@
+// Breakpoints obtained from [Coder Coder]{https://www.youtube.com/watch?v=nI0BfXFjI1I}
+
+$breakpoints-up: (
+  "medium": "640px",
+  "large": "1024px",
+  "xlarge": "1400px",
+);
+
+$breakpoints-down: (
+  "small": "639px",
+  "medium": "1023px",
+  "large": "1399px",
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($map: $breakpoints-up, $key: $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($map: $breakpoints-up, $key: $size)) {
+    @content;
+  }
+}

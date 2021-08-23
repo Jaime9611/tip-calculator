@@ -1,3 +1,6 @@
+@use '../utils/breakpoints' as b;
+@use '../utils/functions' as f;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +12,10 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: var(--page-fsize);
+body {
   font-family: var(--space-mono);
   color: var(--primary-dark-grayish-cyan);
+  font-size: var(--page-fsize);
 }
 
 input:focus,
