@@ -30,7 +30,7 @@ const makeCheck = (id) => {
   option.checked = true;
 };
 
-const isChecked = (option) => {
+const isChecked = () => {
   tip_radio_inputs.forEach((input) => {
     if (input.checked) {
       percentage = parseInt(input.value);
@@ -73,4 +73,12 @@ custom_tip.addEventListener("click", (e) => {
     hide_btn();
     show_input();
   }
+});
+
+persons_input.addEventListener("input", () => {
+  let cuantity = parseInt(persons_input.value);
+  if (typeof cuantity === "number") {
+    persons = cuantity;
+  }
+  console.log(persons);
 });
