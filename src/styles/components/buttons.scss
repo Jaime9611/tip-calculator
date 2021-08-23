@@ -42,4 +42,7 @@
       background-color: var(--primary-light-grayish-cyan);
     }
   }
+  &--hide {
+    display: none;
+  }
 }

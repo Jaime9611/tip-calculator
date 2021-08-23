@@ -20,7 +20,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script defer src="../src/index.js"></script>
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -39,6 +38,7 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script defer src="../src/index.js"></script>
   </head>
   <body class="flex flex--dr flex--all-center">
     <h2 class="header-title">SPLITTER</h2>
@@ -79,12 +79,12 @@
                   <label class="btn btn-tip" for="tip25">25%</label>
                   <input type="radio" name="tip" id="tip50" />
                   <label class="btn btn-tip" for="tip50">50%</label>
-                  <button class="btn btn-custom">Custom</button>
+                  <button class="btn btn-custom" id="custom-tip">Custom</button>
                   <input
                     class="input-field--number input-hide"
                     type="number"
                     name="tip"
-                    id="t6"
+                    id="tcustom"
                     min="1"
                     max="100"
                     placeholder="0"
