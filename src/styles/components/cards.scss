@@ -5,13 +5,16 @@
   width: 100%;
   background-color: var(--white);
   border-radius: f.rem(20);
-  padding: f.rem(18) f.rem(14);
+  padding: f.rem(18);
   color: var(--primary-dark-grayish-cyan);
+  @include b.breakpoint($size: large) {
+    padding: f.rem(40);
+  }
 }
 
 .card-container {
   width: f.rem(310);
   @include b.breakpoint($size: large) {
-    width: f.rem(838);
+    width: 100%;
   }
 }

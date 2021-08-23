@@ -21,5 +21,8 @@
     color: var(--strong-cyan);
     font-size: var(--form-totals-fsize);
     font-weight: 700;
+    @include b.breakpoint($size: large) {
+      font-size: var(--form-totals-fsize-large);
+    }
   }
 }

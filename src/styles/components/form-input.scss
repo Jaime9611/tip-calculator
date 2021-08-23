@@ -1,5 +1,6 @@
 @use '../utils/functions' as f;
 @use '../utils/mixins' as m;
+@use '../utils/breakpoints' as b;
 
 .input-element {
   &__label {
@@ -15,6 +16,10 @@
     margin-top: f.rem(20);
     grid-template-columns: 1fr 1fr;
     gap: f.rem(17);
+    @include b.breakpoint($size: large) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: f.rem(11);
+    }
   }
 }
 
