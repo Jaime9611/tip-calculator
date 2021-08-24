@@ -1,84 +1,18 @@
 import "./styles/main.scss";
+import { bill_value, bill_input } from "./helpers/bill_input";
+import { persons, persons_input } from "./helpers/persons_input";
+import get_percentage from "./helpers/percentage_fields";
 
-// Number Inputs
-const bill_value = document.querySelector("#bill-value");
-const persons_input = document.querySelector("#persons");
-
-// Tip buttons
-const tip_buttons = document.querySelectorAll(".btn-tip");
-const tip_radio_inputs = document.querySelectorAll("input[type='radio']");
-
-// Custom Button and input
-const custom_tip = document.querySelector("#custom-tip");
-const custom_tip_input = document.querySelector("#tcustom");
-
-// Variables
-let bill = 0;
-let percentage = 0;
-let persons = 0;
-
-const hide_btn = (e) => {
-  custom_tip.classList.add("input-hide");
+const checkValues = () => {
+  if (persons && bill_value) {
+    console.log("hi");
+  }
 };
 
-const show_input = (e) => {
-  custom_tip_input.classList.remove("input-hide");
-};
-
-const makeCheck = (id) => {
-  const option = document.querySelector(`#${id}`);
-  option.checked = true;
-};
-
-const isChecked = () => {
-  tip_radio_inputs.forEach((input) => {
-    if (input.checked) {
-      percentage = parseInt(input.value);
-    }
-  });
-  console.log(percentage);
-};
-
-bill_value.addEventListener("input", () => {
-  let price = parseFloat(bill_value.value);
-  if (typeof price === "number") {
-    bill = price;
-  }
-  console.log(bill);
+persons_input.addEventListener("change", () => {
+  checkValues();
 });
 
-tip_buttons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    makeCheck(e.target.htmlFor);
-    isChecked();
-  });
-});
-
-tip_radio_inputs.forEach((input) => {
-  input.addEventListener("change", (e) => isChecked(e.target));
-});
-
-custom_tip.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (!e.target.classList.contains("input-hide")) {
-    hide_btn();
-    show_input();
-  }
-});
-
-custom_tip.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (!e.target.classList.contains("input-hide")) {
-    hide_btn();
-    show_input();
-  }
-});
-
-persons_input.addEventListener("input", () => {
-  let cuantity = parseInt(persons_input.value);
-  if (typeof cuantity === "number") {
-    persons = cuantity;
-  }
-  console.log(persons);
+bill_input.addEventListener("change", () => {
+  checkValues();
 });
