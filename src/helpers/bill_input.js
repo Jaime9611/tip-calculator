@@ -1,3 +1,4 @@
+import { calculateValues } from "..";
 // Number Inputs
 const bill_input = document.querySelector("#bill-value");
 
@@ -7,7 +8,13 @@ bill_input.addEventListener("input", () => {
   let price = parseFloat(bill_input.value);
   if (typeof price === "number") {
     bill_value = price;
+    calculateValues();
   }
 });
 
-export { bill_value, bill_input };
+const reset_bill = () => {
+  bill_input.value = "";
+  bill_value = 0;
+};
+
+export { bill_value, bill_input, reset_bill };
