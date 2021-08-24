@@ -17,6 +17,7 @@ const isChecked = () => {
     if (input.checked) {
       percentage = parseInt(input.value);
     }
+    console.log(percentage);
   });
 };
 
@@ -28,10 +29,6 @@ tip_buttons.forEach((btn) => {
   });
 });
 
-tip_radio_inputs.forEach((input) => {
-  input.addEventListener("change", (e) => isChecked(e.target));
-});
-
 const get_percentage = () => percentage / 100;
 
-export { get_percentage };
+export { get_percentage, tip_radio_inputs };

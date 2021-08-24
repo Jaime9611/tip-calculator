@@ -1,7 +1,11 @@
 import "./styles/main.scss";
 import { bill_value, bill_input } from "./helpers/bill_input";
 import { persons, persons_input } from "./helpers/persons_input";
-import get_percentage from "./helpers/percentage_fields";
+import {
+  get_percentage,
+  isChecked,
+  tip_radio_inputs,
+} from "./helpers/percentage_fields";
 
 const checkValues = () => {
   if (persons && bill_value) {
