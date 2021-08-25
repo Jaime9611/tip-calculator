@@ -16,6 +16,7 @@
   left: 0;
   text-align: center;
   color: var(--secondary-dark-grayish-cyan);
+  opacity: 0.6;
 }
 
 @mixin radio-btn-style($color) {

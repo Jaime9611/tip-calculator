@@ -14,7 +14,7 @@
 
   &-tip {
     background-color: var(--very-dark-cyan);
-    color: var(--white);
+    color: var(--secondary-light-grayish-cyan);
     @include b.breakpoint($size: large) {
       padding: f.rem(6);
     }

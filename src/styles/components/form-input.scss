@@ -71,6 +71,9 @@ input[type="radio"] {
   &:focus {
     border: 2px solid var(--strong-cyan);
   }
+  &::placeholder {
+    color: var(--secondary-dark-grayish-cyan);
+  }
   &-tip {
     @extend .input-field--number;
     height: f.rem(52);
