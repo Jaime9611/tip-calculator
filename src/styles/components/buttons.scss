@@ -2,7 +2,7 @@
 @use '../utils/breakpoints' as b;
 
 .btn {
-  padding: f.rem(6) f.rem(32);
+  padding: f.rem(6);
   border-radius: f.rem(5);
   font-size: var(--form-fsize);
   font-weight: 700;

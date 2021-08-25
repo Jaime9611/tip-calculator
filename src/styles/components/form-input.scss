@@ -71,6 +71,10 @@ input[type="radio"] {
   &:focus {
     border: 2px solid var(--strong-cyan);
   }
+  &-tip {
+    @extend .input-field--number;
+    height: f.rem(52);
+  }
 }
 
 /* Design for no valid fields */
