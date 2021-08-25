@@ -44,7 +44,7 @@
     <div class="container flex--dr flex--all-center">
       <div class="card flex flex--all-center">
         <div class="card-container">
-          <form class="form" autocomplete="off">
+          <form class="form" autocomplete="off" novalidate>
             <div class="form-section--values">
               <div class="form-element--input-element">
                 <label class="input-element__label" for="total-bill"
@@ -61,6 +61,7 @@
                     min="1"
                     step="0.01"
                   />
+                  <span class="input-error" aria-live="polite"></span>
                 </div>
               </div>
               <div class="form-element--tip-selector">
@@ -88,6 +89,7 @@
                     max="100"
                     placeholder="0"
                   />
+                  <span class="input-error--tips" aria-live="polite"></span>
                 </div>
               </div>
               <div class="form-element--input-element">
@@ -104,6 +106,7 @@
                     placeholder="0"
                     min="1"
                   />
+                  <span class="input-error" aria-live="polite"></span>
                 </div>
               </div>
             </div>

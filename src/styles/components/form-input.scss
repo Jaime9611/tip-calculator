@@ -13,6 +13,7 @@
   }
   &--selector-tip {
     display: grid;
+    position: relative;
     margin-top: f.rem(20);
     grid-template-columns: 1fr 1fr;
     gap: f.rem(17);
@@ -70,4 +71,37 @@ input[type="radio"] {
   &:focus {
     border: 2px solid var(--strong-cyan);
   }
+}
+
+/* Design for no valid fields */
+// input:invalid {
+//   border-color: #900;
+// }
+
+input:focus:invalid {
+  border-color: var(--form-error-color);
+}
+
+.input-error {
+  position: absolute;
+  width: 100%;
+  top: -#{f.rem(21)};
+  right: 0;
+  color: var(--form-error-color);
+  font-weight: 700;
+  font-size: f.rem(14);
+  text-align: right;
+  &--tips {
+    @extend .input-error;
+    top: unset;
+    bottom: f.rem(44);
+  }
+}
+
+.input-error.active {
+  padding: f.rem(3);
+}
+
+.input-error--tips.active {
+  padding: f.rem(3);
 }
