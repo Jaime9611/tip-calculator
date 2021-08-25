@@ -1,0 +1,48 @@
+@use '../utils/functions' as f;
+@use '../utils/breakpoints' as b;
+
+.btn {
+  padding: f.rem(6);
+  border-radius: f.rem(5);
+  font-size: var(--form-fsize);
+  font-weight: 700;
+  text-align: center;
+  font-family: var(--space-mono);
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-tip {
+    background-color: var(--very-dark-cyan);
+    color: var(--secondary-light-grayish-cyan);
+    @include b.breakpoint($size: large) {
+      padding: f.rem(6);
+    }
+  }
+  &-custom {
+    border: 2px solid transparent;
+    color: var(--primary-dark-grayish-cyan);
+    background-color: var(--secondary-light-grayish-cyan);
+    &:hover {
+      border: 2px solid var(--strong-cyan);
+    }
+    @include b.breakpoint($size: large) {
+      padding: f.rem(6);
+    }
+  }
+  &--reset {
+    width: 100%;
+    margin-top: f.rem(35);
+    padding: f.rem(9);
+    border: none;
+    font-size: f.rem(18);
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+    &:hover {
+      background-color: var(--primary-light-grayish-cyan);
+    }
+  }
+  &--hide {
+    display: none;
+  }
+}

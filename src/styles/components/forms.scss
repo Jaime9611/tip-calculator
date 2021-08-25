@@ -1,0 +1,46 @@
+@use '../utils/functions' as f;
+@use '../utils/breakpoints' as b;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  @include b.breakpoint($size: large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form-element {
+  padding-top: f.rem(20);
+  padding-bottom: f.rem(20);
+
+  &--input-element {
+    @extend .form-element;
+  }
+  &--info-totals__list {
+    @extend .form-element;
+    padding: f.rem(24);
+    background-color: var(--very-dark-cyan);
+    border-radius: f.rem(20);
+    @include b.breakpoint($size: large) {
+      height: 100%;
+      padding: f.rem(40);
+      justify-content: space-between;
+    }
+  }
+}
+
+.form-section {
+  &--values {
+    width: 100%;
+    @include b.breakpoint($size: large) {
+      width: f.rem(380);
+    }
+  }
+  &--totals {
+    width: 100%;
+    @include b.breakpoint($size: large) {
+      width: f.rem(416);
+    }
+  }
+}

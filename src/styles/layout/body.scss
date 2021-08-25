@@ -1,4 +1,12 @@
+@use '../utils/functions' as f;
+
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--primary-light-grayish-cyan);
+  h2 {
+    letter-spacing: f.rem(15);
+    margin-bottom: f.rem(40);
+    color: var(--very-dark-cyan);
+  }
 }

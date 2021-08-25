@@ -1,4 +1,5 @@
 @use '../utils/functions' as f;
+@use '../utils/breakpoints' as b;
 
 .flex {
   display: flex;
@@ -12,12 +13,17 @@
   &--jc-sa {
     justify-content: space-around;
   }
+  &--ai-c {
+    align-items: center;
+  }
   &--dr {
     flex-direction: column;
   }
 }
 
 .container {
-  width: f.rem(350);
-  height: f.rem(300); // temporal
+  width: f.rem(375);
+  @include b.breakpoint($size: large) {
+    width: f.rem(922);
+  }
 }

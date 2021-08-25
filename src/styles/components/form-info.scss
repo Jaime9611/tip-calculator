@@ -1,0 +1,28 @@
+@use '../utils/functions' as f;
+@use '../utils/breakpoints' as b;
+
+.info-totals {
+  &__list {
+    width: 100%;
+  }
+  &__item {
+    width: 100%;
+    padding: f.rem(10) 0;
+  }
+}
+
+.info-totals__text {
+  &--title {
+    color: var(--secondary-light-grayish-cyan);
+    font-size: var(--page-fsize);
+    font-weight: 700;
+  }
+  &--value {
+    color: var(--strong-cyan);
+    font-size: var(--form-totals-fsize);
+    font-weight: 700;
+    @include b.breakpoint($size: large) {
+      font-size: var(--form-totals-fsize-large);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use './functions'  as f;
+
+@mixin input-icon($type) {
+  @if ($type == text) {
+    font-size: var(--form-fsize);
+    padding: f.rem(5);
+    width: f.rem(44);
+  } @else {
+    padding: f.rem(16);
+    width: f.rem(44);
+    font-size: var(--page-fsize);
+  }
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: var(--secondary-dark-grayish-cyan);
+  opacity: 0.6;
+}
+
+@mixin radio-btn-style($color) {
+  background-color: var(--strong-cyan);
+  color: var($color);
+}

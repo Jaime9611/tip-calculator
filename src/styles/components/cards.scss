@@ -1,7 +1,21 @@
 @use '../utils/functions' as f;
+@use '../utils/breakpoints' as b;
 
 .card {
   width: 100%;
-  height: f.rem(300);
-  background-color: red;
+  margin-bottom: f.rem(20);
+  background-color: var(--white);
+  border-radius: f.rem(30);
+  padding: f.rem(18);
+  color: var(--primary-dark-grayish-cyan);
+  @include b.breakpoint($size: large) {
+    padding: f.rem(40);
+  }
+}
+
+.card-container {
+  width: f.rem(310);
+  @include b.breakpoint($size: large) {
+    width: 100%;
+  }
 }
